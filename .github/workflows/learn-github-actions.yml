@@ -1,6 +1,6 @@
 name: my-first-workflow
 run-name: first-run
-on: [issues]
+on: [push]
 
 jobs:
   first-job:
