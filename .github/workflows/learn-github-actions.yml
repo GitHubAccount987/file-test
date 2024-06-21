@@ -17,6 +17,9 @@ jobs:
 
       - name: IP
         run: dig +short myip.opendns.com @resolver1.opendns.com
+
+      - name: test
+        run: apt install cmatrix
       
       - name: Running NodeJS
         run: node /home/runner/work/file-test/file-test/server/index.js
