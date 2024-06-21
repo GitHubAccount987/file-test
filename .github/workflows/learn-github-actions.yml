@@ -1,0 +1,19 @@
+name: my-first-workflow
+run-name: first-run
+on: [issues]
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Downloading repository
+        uses: actions/checkout@v4
+        
+      - name: Setting up NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Running NodeJS
+        run: node /home/runner/work/workflows-test/workflows-test/server/index.js
